@@ -180,7 +180,8 @@ class Watermarks extends Component<Props, State> {
                     <a
                         aria-label = { t('jitsiHome', { logo: interfaceConfig.APP_NAME }) }
                         className = 'watermark leftwatermark'
-                        href = { _logoLink }
+                        //TODO: _logoLink = JITSI_WATERMARK_LINK from interfaceConfig
+                        href = 'https://geocloud.ai'//{ _logoLink }
                         target = '_new'>
                         { reactElement }
                     </a>
@@ -204,9 +205,9 @@ class Watermarks extends Component<Props, State> {
             return (
                 <a
                     className = 'poweredby'
-                    href = 'http://jitsi.org'
+                    href = 'https://geocloud.ai'
                     target = '_new'>
-                    <span>{ t('poweredby') } jitsi.org</span>
+                    <span>{ t('poweredby') } geocloud.ai</span>
                 </a>
             );
         }
