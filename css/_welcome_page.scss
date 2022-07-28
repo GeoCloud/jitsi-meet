@@ -19,7 +19,7 @@ body.welcome-page {
         background-repeat: $welcomePageHeaderBackgroundRepeat;
         background-size: $welcomePageHeaderBackgroundSize;
         padding-bottom: $welcomePageHeaderPaddingBottom;
-        background-color: #131519;
+        //background-color:#131519;
         height: 400px;
         overflow: hidden;
         position: relative;
@@ -29,6 +29,7 @@ body.welcome-page {
             flex-direction: column;
             margin: $welcomePageHeaderContainerMargin;
             z-index: $zindex2;
+            max-width: 587px;
         }
 
         .header-text-title {
@@ -44,9 +45,9 @@ body.welcome-page {
 
         .header-text-subtitle {
             color: #fff;
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 26px;
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 40px;
             margin: 16px 0 32px 0;
             text-align: $welcomePageHeaderTextAlign;
 

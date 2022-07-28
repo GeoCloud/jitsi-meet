@@ -1,9 +1,11 @@
 @import "themes/light";
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 /**
  * Style variables
  */
-$baseFontFamily: -apple-system, BlinkMacSystemFont, 'open_sanslight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$baseFontFamily: Jost, -apple-system, BlinkMacSystemFont, 'open_sanslight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $hangupColor:#DD3849;
 $hangupHoverColor: #F25363;
 $hangupFontSize: 2em;
@@ -164,10 +166,10 @@ $welcomePageWatermarkHeight: 43px;
  */
 $welcomePageDescriptionColor: #fff;
 $welcomePageFontFamily: inherit;
-$welcomePageBackground: none;
+$welcomePageBackground: url('../images/welcome-background-geocloud.png');
 $welcomePageTitleColor: #fff;
 
-$welcomePageHeaderBackground: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/welcome-background.png');
+$welcomePageHeaderBackground: none; //linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/welcome-background.png');
 $welcomePageHeaderBackgroundPosition: center;
 $welcomePageHeaderBackgroundRepeat: none;
 $welcomePageHeaderBackgroundSize: cover;
@@ -179,9 +181,9 @@ $welcomePageHeaderContainerDisplay: flex;
 $welcomePageHeaderContainerMargin: 104px 32px 0 32px;
 
 $welcomePageHeaderTextTitleMarginBottom: 0;
-$welcomePageHeaderTextTitleFontSize: 42px;
-$welcomePageHeaderTextTitleFontWeight: normal;
-$welcomePageHeaderTextTitleLineHeight: 50px;
+$welcomePageHeaderTextTitleFontSize: 52px;
+$welcomePageHeaderTextTitleFontWeight: 600;
+$welcomePageHeaderTextTitleLineHeight: 60px;
 $welcomePageHeaderTextTitleOpacity: 1;
 
 $welcomePageEnterRoomDisplay: flex;
