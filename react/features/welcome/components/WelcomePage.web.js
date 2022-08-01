@@ -181,6 +181,8 @@ class WelcomePage extends AbstractWelcomePage {
         const footerClassName = DISPLAY_WELCOME_FOOTER ? 'with-footer' : 'without-footer';
 
         return (
+            <div>
+            <div className={'welcome-background'}>
             <div
                 className = { `welcome ${contentClassName} ${footerClassName}` }
                 id = 'welcome_page'>
@@ -274,6 +276,8 @@ class WelcomePage extends AbstractWelcomePage {
                             ref = { this._setAdditionalContentRef } />
                         : null }
                 </div>
+            </div>
+            </div>
                 { DISPLAY_WELCOME_FOOTER && this._renderFooter()}
             </div>
 
