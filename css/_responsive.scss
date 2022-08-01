@@ -18,6 +18,7 @@
 
         .header {
             background-color: #002637;
+            overflow: hidden;
 
             #enter_room {
                 .enter-room-input-container {
@@ -37,6 +38,11 @@
 
         .header-text-title {
             text-align: center;
+            font-size: 24px;
+        }
+
+        .header-text-subtitle {
+            font-size: 18px;
         }
 
         .welcome-cards-container {

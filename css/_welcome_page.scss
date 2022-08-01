@@ -33,7 +33,7 @@ body.welcome-page {
         padding-bottom: $welcomePageHeaderPaddingBottom;
         //background-color:#131519;
         //height: 400px;
-        overflow: hidden;
+        //overflow: hidden;
         position: relative;
 
         .header-container {
@@ -55,6 +55,7 @@ body.welcome-page {
             text-align: $welcomePageHeaderTextAlign;
         }
 
+
         .header-text-subtitle {
             color: #fff;
             font-size: 28px;
@@ -63,6 +64,30 @@ body.welcome-page {
             margin: 20px 0 70px 0;
             text-align: $welcomePageHeaderTextAlign;
 
+        }
+
+        @media screen and (max-width: $smallScreen) {
+            .header-text-title {
+                font-size: 32px;
+                line-height: 32px;
+            }
+
+            .header-text-subtitle {
+                font-size: 22px;
+                line-height: 22px;
+            }
+        }
+
+        @media screen and (max-width: $verySmallScreen) {
+            .header-text-title {
+                font-size: 24px;
+                line-height: 24px;
+            }
+
+            .header-text-subtitle {
+                font-size: 18px;
+                line-height: 18px;
+            }
         }
 
         #enter_room {
@@ -79,7 +104,7 @@ body.welcome-page {
             .enter-room-input-container {
                 text-align: left;
                 color: #253858;
-                flex-grow: 1;
+                flex-grow: 0;
                 height: fit-content;
                 padding-right: 4px;
                 position: relative;
@@ -252,11 +277,12 @@ body.welcome-page {
     .welcome-cards-container {
         color:#131519;
         padding-top: 40px;
+        padding-bottom: 70px;
     }
 
     .welcome-card-row {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         padding: 0 32px;
     }
 
@@ -299,7 +325,7 @@ body.welcome-page {
 }
 
 .welcome-footer-padded {
-    padding: 0px 16px;
+    padding: 0px 32px;
 }
 
 .welcome-footer-row-block {
@@ -313,8 +339,18 @@ body.welcome-page {
     }
 }
 
+.welcome-footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a:not(:last-child) {
+        margin-right: 16px;
+    }
+}
+
 .welcome-footer--row-1 {
-    padding: 40px 0 24px 0;
+    padding: 40px 18px 24px;
 }
 
 .welcome-footer-row-1-text {
