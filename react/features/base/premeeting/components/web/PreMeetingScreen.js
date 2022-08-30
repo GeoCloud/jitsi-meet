@@ -5,11 +5,14 @@ import React, { PureComponent } from 'react';
 import { connect } from '../../../../base/redux';
 import DeviceStatus from '../../../../prejoin/components/preview/DeviceStatus';
 import { Toolbox } from '../../../../toolbox/components/web';
+import { Watermarks } from '../../../react';
 import { PREMEETING_BUTTONS, THIRD_PARTY_PREJOIN_BUTTONS } from '../../../config/constants';
 import { getToolbarButtons, isToolbarButtonEnabled } from '../../../config/functions.web';
 
 import ConnectionStatus from './ConnectionStatus';
 import Preview from './Preview';
+import {makeStyles} from "@material-ui/styles";
+import {PREJOIN_DEFAULT_CONTENT_WIDTH} from "../../../ui/components/variables";
 
 type Props = {
 
@@ -74,6 +77,29 @@ type Props = {
     videoTrack?: Object
 }
 
+const useStyles = makeStyles(theme => {
+    return {
+        waterMarkStyle: {
+            position: 'absolute',
+            zIndex: 5,
+
+            [theme.breakpoints.down('400')]: {
+                margin: 0,
+            },
+
+            '@media (max-width: 720px)': {
+                margin: `${theme.spacing(4)} auto`,
+                position: 'fixed',
+                top: 0,
+            },
+
+            '@media (max-height: 420px)': {
+                display: 'none'
+            },
+        }
+    };
+});
+
 /**
  * Implements a pre-meeting screen that can be used at various pre-meeting phases, for example
  * on the prejoin screen (pre-connection) or lobby (post-connection).
@@ -84,6 +110,7 @@ class PreMeetingScreen extends PureComponent<Props> {
      *
      * @static
      */
+
     static defaultProps = {
         showCopyUrlButton: true,
         showToolbox: true
@@ -95,6 +122,7 @@ class PreMeetingScreen extends PureComponent<Props> {
      * @inheritdoc
      */
     render() {
+
         const {
             _buttons,
             _premeetingBackground,
@@ -118,6 +146,9 @@ class PreMeetingScreen extends PureComponent<Props> {
             <div className = { containerClassName }>
                 <div style = { style }>
                     <div className = 'content'>
+                        <div className = 'premeeting-screen-watermark' >
+                            <Watermarks/>
+                        </div>
                         <ConnectionStatus />
 
                         <div className = 'content-controls'>

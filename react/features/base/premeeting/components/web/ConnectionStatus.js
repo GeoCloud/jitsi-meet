@@ -38,6 +38,7 @@ const useStyles = makeStyles(theme => {
             lineHeight: '16px',
             position: 'absolute',
             width: '100%',
+            zIndex: 10,
 
             [theme.breakpoints.down('400')]: {
                 margin: 0,

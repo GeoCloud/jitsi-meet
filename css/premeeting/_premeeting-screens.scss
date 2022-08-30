@@ -155,8 +155,20 @@
         }
     }
 
+     .premeeting-screen-watermark {
+         z-index: 5;
+     }
+
     @media (max-width: 720px) {
         flex-direction: column-reverse;
+
+        .premeeting-screen-watermark {
+            margin: 0 auto;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-104px);
+        }
 
         .content {
             height: auto;
@@ -166,6 +178,9 @@
 
     // mobile phone landscape
     @media (max-height: 420px) {
+        .premeeting-screen-watermark {
+            display: none;
+        }
         div.content {
             padding: 16px 16px 0 16px;
         }
